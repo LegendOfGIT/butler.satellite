@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="853e7509-8f31-40cb-a407-e9d911d69bd9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50039/DataWarehouse.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataWarehouse.wsdl" MetadataType="Wsdl" ID="190f066b-1686-40ff-ad52-b0a2dc8a72a0" SourceId="1" SourceUrl="http://localhost:50039/DataWarehouse.svc?wsdl" />
+    <MetadataFile FileName="DataWarehouse.xsd" MetadataType="Schema" ID="1cc80e6d-d13e-41c1-a4ad-6604cb5859d9" SourceId="1" SourceUrl="http://localhost:50039/DataWarehouse.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataWarehouse.disco" MetadataType="Disco" ID="64eee29f-7397-445d-b419-155aa756640f" SourceId="1" SourceUrl="http://localhost:50039/DataWarehouse.svc?disco" />
+    <MetadataFile FileName="DataWarehouse1.xsd" MetadataType="Schema" ID="7a7c4b7e-e227-47da-a638-6dd831a2b5eb" SourceId="1" SourceUrl="http://localhost:50039/DataWarehouse.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataWarehouse2.xsd" MetadataType="Schema" ID="5b6b19a0-3a39-4217-a337-3a5a770fc589" SourceId="1" SourceUrl="http://localhost:50039/DataWarehouse.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

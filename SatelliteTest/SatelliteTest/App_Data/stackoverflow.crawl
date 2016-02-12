@@ -1,0 +1,43 @@
+﻿"http://stackoverflow.com" >> base.uri
+"http://stackoverflow.com/?tab=hot" >> current.uri
+
+current.uri >> pageuri
+pageuri:browse()
+ .question-summary
+  @id >> post.id
+  .summary
+   .tags a >> post.tag
+   a.question-hyperlink >> post.title
+   a.question-hyperlink @href >> post.uri
+   post.uri >> questionuri
+   post.uri:browse()
+    "post, programming" >> post.warehousetag
+    .lastactivity-link @title >> post.timestamplastactivity
+    .question
+     .comment
+      @id >> comment.id
+       comment.id >> post.correlation
+       post.uri >> comment.uri
+       post.id >> comment.correlation
+      .comment-copy >> comment.text
+     .post-text >> post.text
+     .owner
+      .user-action-time
+       span @title >> post.timestampcreation
+      .user-details a >> post.authorusername    
+    div.answer
+     questionuri >> answerpost.uri
+     "post, answer" >> answerpost.warehousetag
+     .user-action-time .relativetime @title >> answerpost.timestamplastactivity
+     @id >> answerpost.id
+     tr[class^=comment]
+      @id >> answercomment.id
+       answercomment.id >> answerpost.corellation
+       answerpost.uri >> answercomment.uri
+       answerpost.id >> answercomment.corellation
+      .comment-copy >> answercomment.text
+     .post-text >> answerpost.text
+     .post-signature
+      .user-action-time
+       span @title >> answerpost.timestampcreation
+      .user-details a >> answerpost.authorusername

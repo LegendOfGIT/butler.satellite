@@ -1,0 +1,17 @@
+﻿"http://www.chefkoch.de" >> base.uri
+"http://www.chefkoch.de/rs/s0/lachs/Rezepte.html" >> current.uri
+
+current.uri >> pageuri
+pageuri:browse()
+ .rowclick
+  .recipe-result-col-1 
+   a @href >> recipe.uri   
+    [0-9]* >> recipe.id
+   img @src >> recipe.image
+  .search-result-title >> recipe.title
+  recipe.uri:browse()
+   .incredients
+   .ingredient:not(:first-child)
+    .amount >> recipe.ingredient
+    .name >> recipe.ingredient
+  "food, recipe" >> recipe.warehousetag
