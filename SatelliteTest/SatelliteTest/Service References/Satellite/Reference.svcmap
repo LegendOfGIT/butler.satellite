@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:53978/InformationSatellite.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:53978/Satellite.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InformationSatellite.xsd" MetadataType="Schema" ID="d93e867e-4126-48f4-b445-afb033961eba" SourceId="1" SourceUrl="http://localhost:53978/InformationSatellite.svc?xsd=xsd1" />
-    <MetadataFile FileName="InformationSatellite1.xsd" MetadataType="Schema" ID="a6a714be-49ec-4472-91b9-d310500b758d" SourceId="1" SourceUrl="http://localhost:53978/InformationSatellite.svc?xsd=xsd0" />
-    <MetadataFile FileName="InformationSatellite2.xsd" MetadataType="Schema" ID="9d7a1813-6cbd-4ab8-bff1-ac14c1da1708" SourceId="1" SourceUrl="http://localhost:53978/InformationSatellite.svc?xsd=xsd2" />
-    <MetadataFile FileName="InformationSatellite.disco" MetadataType="Disco" ID="0dcfa91f-e11d-4faa-b6d8-6554c1554bc8" SourceId="1" SourceUrl="http://localhost:53978/InformationSatellite.svc?disco" />
-    <MetadataFile FileName="InformationSatellite.wsdl" MetadataType="Wsdl" ID="895dfc59-e82d-4b7d-8d69-7d7099179b06" SourceId="1" SourceUrl="http://localhost:53978/InformationSatellite.svc?wsdl" />
+    <MetadataFile FileName="Satellite.wsdl" MetadataType="Wsdl" ID="441274b8-ff25-4d7a-996c-e34a154a5d62" SourceId="1" SourceUrl="http://localhost:53978/Satellite.svc?wsdl" />
+    <MetadataFile FileName="Satellite.xsd" MetadataType="Schema" ID="f6318953-3a32-434d-a4f1-8660007917a5" SourceId="1" SourceUrl="http://localhost:53978/Satellite.svc?xsd=xsd2" />
+    <MetadataFile FileName="Satellite1.xsd" MetadataType="Schema" ID="d4775d00-baa1-440e-b3db-5ede81f5a07f" SourceId="1" SourceUrl="http://localhost:53978/Satellite.svc?xsd=xsd1" />
+    <MetadataFile FileName="Satellite.disco" MetadataType="Disco" ID="8040efa5-e898-4d40-b1b3-01dd2d7972e4" SourceId="1" SourceUrl="http://localhost:53978/Satellite.svc?disco" />
+    <MetadataFile FileName="Satellite2.xsd" MetadataType="Schema" ID="f721e8a0-3924-44c6-a54d-31a717322ec5" SourceId="1" SourceUrl="http://localhost:53978/Satellite.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

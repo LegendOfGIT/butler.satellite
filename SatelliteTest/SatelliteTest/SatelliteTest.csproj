@@ -34,27 +34,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CsQuery, Version=1.3.5.200, Culture=neutral, PublicKeyToken=ab50af63106f043f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\CsQuery.dll</HintPath>
+      <HintPath>..\..\Satellite\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\CsQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Data.Mining, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Mining.dll</HintPath>
+    <Reference Include="Data.Mining, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Satellite\packages\Data.Mining.1.0.2\lib\net45\Data.Mining.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Data.Warehouse, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.dll</HintPath>
+      <HintPath>..\..\Satellite\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Data.Warehouse.Crawler, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.Crawler.dll</HintPath>
+      <HintPath>..\..\Satellite\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.Crawler.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Data.Web, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Web.dll</HintPath>
+    <Reference Include="Data.Web, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Data.Web.1.0.3\lib\net46\Data.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\Satellite\packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -72,7 +72,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProviderMock.cs" />
-    <Compile Include="Service References\InformationSatellite\Reference.cs">
+    <Compile Include="Service References\Satellite\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -84,33 +84,37 @@
     <None Include="App_Data\fun\9gag.crawl" />
     <None Include="App_Data\gelbeseiten.crawl" />
     <None Include="App_Data\habrahabr.crawl" />
+    <None Include="App_Data\shopping\esprit.crawl" />
     <None Include="App_Data\stackoverflow.crawl" />
     <None Include="App_Data\hm.crawl" />
     <None Include="App_Data\twitter.crawl" />
     <None Include="App_Data\shopping\mytoys.crawl" />
     <None Include="packages.config" />
-    <None Include="Service References\InformationSatellite\InformationSatellite.wsdl" />
-    <None Include="Service References\InformationSatellite\InformationSatellite.xsd" />
-    <None Include="Service References\InformationSatellite\InformationSatellite1.xsd" />
-    <None Include="Service References\InformationSatellite\InformationSatellite2.xsd" />
+    <None Include="Service References\Satellite\Satellite.wsdl" />
+    <None Include="Service References\Satellite\Satellite.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Satellite\Satellite1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Satellite\Satellite2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\InformationSatellite\" />
+    <WCFMetadataStorage Include="Service References\Satellite\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\InformationSatellite\InformationSatellite.disco" />
+    <None Include="Service References\Satellite\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\InformationSatellite\configuration91.svcinfo" />
+    <None Include="Service References\Satellite\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\InformationSatellite\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\InformationSatellite\Reference.svcmap">
+    <None Include="Service References\Satellite\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -119,6 +123,7 @@
     <Content Include="App_Data\XMLFile1.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Service References\Satellite\Satellite.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

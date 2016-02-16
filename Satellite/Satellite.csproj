@@ -51,6 +51,10 @@
       <HintPath>packages\Data.Warehouse.Crawler.1.0.10\lib\net45\CsQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Data.Mining, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Data.Warehouse.1.0.8\lib\net45\Data.Mining.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Data.Warehouse, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.dll</HintPath>
       <Private>True</Private>
@@ -59,8 +63,8 @@
       <HintPath>packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Warehouse.Crawler.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Data.Web, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Data.Warehouse.Crawler.1.0.10\lib\net45\Data.Web.dll</HintPath>
+    <Reference Include="Data.Web, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Data.Web.1.0.3\lib\net46\Data.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -98,6 +102,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Satellite.svc" />
+    <Content Include="packages.config" />
     <None Include="Service References\DataWarehouse\configuration91.svcinfo" />
     <None Include="Service References\DataWarehouse\configuration.svcinfo" />
     <None Include="Service References\DataWarehouse\DataWarehouse.wsdl" />
@@ -141,9 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\DataWarehouse\" />

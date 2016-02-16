@@ -8,44 +8,44 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SatelliteTest.InformationSatellite {
+namespace SatelliteTest.Satellite {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="InformationSatellite.IInformationSatellite")]
-    public interface IInformationSatellite {
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Satellite.ISatellite")]
+    public interface ISatellite {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInformationSatellite/Process", ReplyAction="http://tempuri.org/IInformationSatellite/ProcessResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISatellite/Process", ReplyAction="http://tempuri.org/ISatellite/ProcessResponse")]
         void Process(string template, System.Collections.Generic.Dictionary<string, string> parameters);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IInformationSatellite/Process", ReplyAction="http://tempuri.org/IInformationSatellite/ProcessResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISatellite/Process", ReplyAction="http://tempuri.org/ISatellite/ProcessResponse")]
         System.Threading.Tasks.Task ProcessAsync(string template, System.Collections.Generic.Dictionary<string, string> parameters);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IInformationSatelliteChannel : SatelliteTest.InformationSatellite.IInformationSatellite, System.ServiceModel.IClientChannel {
+    public interface ISatelliteChannel : SatelliteTest.Satellite.ISatellite, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class InformationSatelliteClient : System.ServiceModel.ClientBase<SatelliteTest.InformationSatellite.IInformationSatellite>, SatelliteTest.InformationSatellite.IInformationSatellite {
+    public partial class SatelliteClient : System.ServiceModel.ClientBase<SatelliteTest.Satellite.ISatellite>, SatelliteTest.Satellite.ISatellite {
         
-        public InformationSatelliteClient() {
+        public SatelliteClient() {
         }
         
-        public InformationSatelliteClient(string endpointConfigurationName) : 
+        public SatelliteClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public InformationSatelliteClient(string endpointConfigurationName, string remoteAddress) : 
+        public SatelliteClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public InformationSatelliteClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SatelliteClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public InformationSatelliteClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SatelliteClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         

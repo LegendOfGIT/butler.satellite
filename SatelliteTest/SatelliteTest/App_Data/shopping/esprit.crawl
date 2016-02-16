@@ -1,0 +1,16 @@
+﻿"http://www.esprit.de/" >> base.uri
+"http://www.esprit.de/" >> current.uri
+
+current.uri >> pageuri
+pageuri:browse()
+ .level-3:first() a @href >> categoryuri
+ categoryuri >> productpageuri
+ productpageuri:browse()! 
+  [data-webtrekk-click=next] @href >> productpageuri
+  producturi:browse()
+   .singleproductview-details-title >> product.title
+   .singleproductview-details-colorset img @title >> product.color
+   .singleproductview-stylefooter-styledata span >> product.id
+   .price_output:first() >> product.price
+   "product, shopping" >> product.warehousetag
+  [data-webtrekk-click=product.click] @href >> producturi
