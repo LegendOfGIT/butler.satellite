@@ -13,17 +13,18 @@ namespace SatelliteTest
         {
             var templatesfiles = new[]
             {
-                //@"..\..\App_Data\shopping\mytoys.crawl",
+                @"..\..\App_Data\shopping\mytoys.crawl",
                 //@"..\..\App_Data\chefkoch.crawl",
-                @"..\..\App_Data\shopping\esprit.crawl",
+                //@"..\..\App_Data\shopping\esprit.crawl",
                 //@"..\..\App_Data\stackoverflow.crawl",
                 //@"..\..\App_Data\fun\9gag.crawl"
             };
             templatesfiles.ToList().ForEach(templatefile =>
             {
                 var template = File.ReadAllText(templatefile);
-                //ExecuteSatelliteTest(template);
-                ExecuteMockTest(template);
+                var file = templatefile;
+                ExecuteSatelliteTest(template);
+                //ExecuteMockTest(file);
             });
         }
 
@@ -32,10 +33,10 @@ namespace SatelliteTest
             var client = new Satellite.SatelliteClient();
             client.Process(template, null);
         }
-        private static void ExecuteMockTest(string template)
+        private static void ExecuteMockTest(string file)
         {
             var compiler = new WebcrawlerCompiler();
-            var commandset = compiler.ParseCommandset(Regex.Split(template, Environment.NewLine));
+            var commandset = compiler.ParseCommandset(File.ReadAllLines(file));
 
             var crawler = new WebcrawlingUtility(new ProviderMock());
             crawler.ContextCommandset = compiler.ContextCommandset;
