@@ -15,16 +15,15 @@ namespace SatelliteTest
             {
                 @"..\..\App_Data\shopping\mytoys.crawl",
                 //@"..\..\App_Data\chefkoch.crawl",
-                //@"..\..\App_Data\shopping\esprit.crawl",
+                @"..\..\App_Data\shopping\esprit.crawl",
                 //@"..\..\App_Data\stackoverflow.crawl",
                 //@"..\..\App_Data\fun\9gag.crawl"
             };
             templatesfiles.ToList().ForEach(templatefile =>
             {
                 var template = File.ReadAllText(templatefile);
-                var file = templatefile;
                 ExecuteSatelliteTest(template);
-                //ExecuteMockTest(file);
+                //ExecuteMockTest(templatefile);
             });
         }
 

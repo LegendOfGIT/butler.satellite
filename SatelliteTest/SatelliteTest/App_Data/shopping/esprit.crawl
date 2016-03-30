@@ -3,14 +3,20 @@
 
 current.uri >> pageuri
 pageuri:browse()
- .level-3:first() a @href >> categoryuri
+ .level-3 a @href >> categoryuri
  categoryuri >> productpageuri
- productpageuri:browse()! 
-  [data-webtrekk-click=next] @href >> productpageuri
-  producturi:browse()
-   .singleproductview-details-title >> product.title
-   .singleproductview-details-colorset img @title >> product.color
-   .price_output:first() >> product.price
-   .fieldset-singleform li input @value >> product.size
-   "product, shopping" >> product.warehousetag
-  [data-webtrekk-click=product.click] @href >> producturi
+ categoryuri:browse()
+  productpageuri:browse()!
+   [data-webtrekk-click=product.click] @href >> producturi
+   producturi:browse()
+    .singleproductview-details-colorset @href >> productcoloruri
+    productcoloruri:browse() 
+     meta[property=og:url] @content >> product.uri
+     .singleproductview-details-title >> product.title
+     .singleproductview-colorthumbs .actualColorname >> product.color
+     .price_output:first() >> product.price
+     .fieldset-singleform li input @value >> product.size
+     .singleproductview-fit-name .fitguide >> product.sizefit
+     .singleproductview-styleimage img @src >> product.image
+     "product, shopping" >> product.warehousetag
+   [data-webtrekk-click=next] @href >> productpageuri

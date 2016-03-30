@@ -15,11 +15,11 @@ pageuri:browse()
         .prodInfo .prodTitle a @href >> product.uri
          product.uri:browse()
           meta[property=og:image] @content >> product.image
-          meta[property=zx:amount] @content >> product.price
           meta[property=zx:currency] @content >> product.currency
           meta[property=zx:brand] @content >> product.brand
           meta[property=zx:description] @content >> product.description
           meta[property=zx:identifier] @content >> product.id
+          meta[itemprop=price] @content >> product.price
           meta[name=WT.pn_sku] @content >> product.plu
           meta[name=WT.pn] @content >> product.title
           .tag_track
@@ -34,6 +34,6 @@ pageuri:browse()
            product_onsale(.*?,|.*")
             :(.*?,|.*")
              "(.*?,|.*")
-              [^",]+ >> product.onsale 		   			            
+              [^",]+ >> product.onsale
           "product, shopping" >> product.warehousetag
       .paging a.next:first() @href >> pageuri
