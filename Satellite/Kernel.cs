@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+using Satellite.Provider;
+
 using Data.Warehouse.Crawler;
 
 namespace Satellite
@@ -13,7 +16,7 @@ namespace Satellite
                 var compiler = new WebcrawlerCompiler();
                 var commandset = compiler.ParseCommandset(Regex.Split(template, Environment.NewLine));                
 
-                var crawler = new WebcrawlingUtility(new InfostoreProvider());
+                var crawler = new WebcrawlingUtility(new InfostoreQueueProvider());
                 crawler.ContextCommandset = compiler.ContextCommandset;
                 crawler.Crawling(commandset);
             }

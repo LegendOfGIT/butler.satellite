@@ -72,6 +72,10 @@
       <HintPath>packages\Data.Warehouse.Crawler.1.0.11\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.6.1.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>packages\RabbitMQ.Client.3.6.1\lib\net45\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -131,11 +135,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Provider\InfostoreQueueProvider.cs" />
     <Compile Include="Satellite.svc.cs">
       <DependentUpon>Satellite.svc</DependentUpon>
     </Compile>
     <Compile Include="ISatellite.cs" />
-    <Compile Include="InfostoreProvider.cs" />
     <Compile Include="Kernel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\DataWarehouse\Reference.cs">

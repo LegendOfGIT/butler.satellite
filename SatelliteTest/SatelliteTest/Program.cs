@@ -15,7 +15,7 @@ namespace SatelliteTest
             {
                 @"..\..\App_Data\shopping\mytoys.crawl",
                 //@"..\..\App_Data\chefkoch.crawl",
-                @"..\..\App_Data\shopping\esprit.crawl",
+                //@"..\..\App_Data\shopping\esprit.crawl",
                 //@"..\..\App_Data\stackoverflow.crawl",
                 //@"..\..\App_Data\fun\9gag.crawl"
             };
